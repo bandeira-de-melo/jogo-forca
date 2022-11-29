@@ -2,18 +2,24 @@ import React from 'react'
 import {useState} from 'react'
 import Jogo from "./components/Jogo";
 import Letras from "./components/Letras";
-import palavras from './palavras'
+import Chute from "./components/Chute";
+import alfabeto from "./alfabeto";
+
 
 
 
 function App() {
-  const [palavraSorteada, setPalavraSorteada] = useState([])
-  const [estadoBotes, setEstadoBotes] = useState(true);
-  const [erros, setErros] = useState(0);
+  const [inputDesligado, setInputDesigado] = useState(true)
+  const [letrasSelecionadas, setLetrasSelecionadas] = useState([])
   return (
     <div className="App">
-      <Jogo estadobtns ={estadoBotes} setEstadoBotes={setEstadoBotes} palavras={palavras} palavraSorteada={palavraSorteada} setPalavraSorteada={setPalavraSorteada}/>
-      <Letras palavraSorteada={palavraSorteada} setPalavraSorteada={setPalavraSorteada}/>
+
+      <Jogo />
+
+      <Letras letrasSelecionadas={letrasSelecionadas}/>
+      
+      <Chute inputDesligado={inputDesligado}/>
+
     </div>
   );
 }

@@ -4,26 +4,44 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
 }
 .App{
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .jogo-main-container{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #000;
 }
+
+img {
+    width: 400px;
+}
+
 .jogo-botao-palavra-container {
     height: 383px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .btn-iniciar {
+    margin-top: 50px;
+    margin-right: 30px;
     background-color: #27AE60;
     color: #fff;
     width: 200px;
@@ -31,6 +49,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.3rem;
 }
 
 .palavra-box {
@@ -42,6 +63,7 @@ body {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
 .botao-letras {
@@ -53,4 +75,12 @@ body {
     background-color: #E1ECF4;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+}
+
+.chute-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 5px;
 }
